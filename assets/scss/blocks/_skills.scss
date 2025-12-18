@@ -1,0 +1,45 @@
+@use "utils/_mixins" as sh;
+
+.skills {
+  &__container {
+    margin-top: 100px !important;
+    height: 300px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.5;
+    .fa-code {
+      color: rgb(236, 251, 169);
+      font-size: sh.fluid(36);
+    }
+  }
+
+  &__title {
+    font-size: sh.fluid(32);
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.fa {
+}

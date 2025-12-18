@@ -7,6 +7,9 @@
 
 // блоки
 @use "blocks/_header.scss";
+@use "blocks/_heroSection.scss";
+@use "blocks/_about.scss";
+@use "blocks/_skills.scss";
 @use "blocks/_footer.scss";
 
 .wrapper {
@@ -23,7 +26,7 @@
   max-width: 1920px;
   margin: 0 auto;
   // background-color: #292F36;
-  padding: 0px 20px;
+  padding: 0px 5px;
 }
 
 /* Базовые стили — сразу ТЕМНЫЕ */
@@ -39,3 +42,5 @@ body {
   color: #292f36;
   transition: background-color 0.3s, color 0.3s;
 }
+
+
