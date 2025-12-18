@@ -1,0 +1,41 @@
+//утилиты
+@use "utils/_fonts.scss" as *;
+@use "utils/_reset.scss" as *;
+@use "utils/_mixins" as mSt;
+@use "utils/_settings.scss" as setSt;
+@use "utils/_variable.scss" as varSt;
+
+// блоки
+@use "blocks/_header.scss";
+@use "blocks/_footer.scss";
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1920px;
+  margin: 0 auto;
+  // background-color: #292F36;
+  padding: 0px 20px;
+}
+
+/* Базовые стили — сразу ТЕМНЫЕ */
+body {
+  background-color: #292f36;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стили для СВЕТЛОЙ темы */
+.dark-mode {
+  background-color: #ffffff;
+  color: #292f36;
+  transition: background-color 0.3s, color 0.3s;
+}

@@ -1,0 +1,70 @@
+@use "utils/_mixins" as mh;
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    font-size: mh.fluid(16);
+  }
+
+  &__logo {
+    // width: 50px;
+    // height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    a {
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__other-lang {
+  }
+
+  &__other-theme {
+    color: #ffcc00;
+  }
+
+  &__other-offer {
+    background-color: rgb(84, 84, 158);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+}
+.fa {
+    color: rgb(163, 115, 208);
+}
+.fa-user {
+}
+.fa-th {
+}
+.fa-envelope {
+}
+
+.fa-sun {
+}
