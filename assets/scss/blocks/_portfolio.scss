@@ -1,0 +1,16 @@
+@use "utils/_mixins" as sh;
+
+.portfolio {
+  padding-top: 50px;
+  backdrop-filter: grayscale(100%);
+
+  &__container {
+    background-image: url(../../img/portfolio_1920.jpg);
+    filter: grayscale(100%);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

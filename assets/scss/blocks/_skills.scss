@@ -21,6 +21,10 @@
     font-size: sh.fluid(32);
     text-align: center;
     padding-bottom: 20px;
+
+    .fa-code {
+      color: #f13f3f;
+    }
   }
 
   &__list {

@@ -1,0 +1,33 @@
+@use "utils/_mixins" as mwh;
+
+.myWork {
+  padding-top: 50px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__title {
+    .fa-briefcase {
+      color: #cd3021;
+    }
+  }
+
+  &__list {
+  }
+
+  &__technologies {
+  }
+
+  &__img {
+  }
+
+  &__info {
+  }
+}
+.fa {
+}
+.fa-briefcase {
+}

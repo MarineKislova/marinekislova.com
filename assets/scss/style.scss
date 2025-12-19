@@ -10,37 +10,31 @@
 @use "blocks/_heroSection.scss";
 @use "blocks/_about.scss";
 @use "blocks/_skills.scss";
+@use "blocks/_portfolio.scss";
+@use "blocks/_myWork.scss";
 @use "blocks/_footer.scss";
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
+  background-color: #292f36;
 }
 .content {
   flex: 1 1 auto;
+  // position: relative;
 }
 
 [class*="__container"] {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
-  // background-color: #292F36;
-  padding: 0px 5px;
-}
+  
 
-/* Базовые стили — сразу ТЕМНЫЕ */
-body {
-  background-color: #292f36;
-  color: #ffffff;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Стили для СВЕТЛОЙ темы */
-.dark-mode {
-  background-color: #ffffff;
-  color: #292f36;
-  transition: background-color 0.3s, color 0.3s;
+  @media (max-width: 1440px) {
+    padding: 0px 10px;
+  }
 }
 
 
