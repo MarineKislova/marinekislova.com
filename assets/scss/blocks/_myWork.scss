@@ -1,33 +1,69 @@
 @use "utils/_mixins" as mwh;
 
-.myWork {
-  padding-top: 50px;
-
+.my-work {
+  padding-top: 25px;
+  padding-bottom: 25px;
   &__container {
-    display: flex;
-    flex-direction: column;
-
   }
 
-  &__title {
-    .fa-briefcase {
-      color: #cd3021;
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    gap: 20px;
+    height: 300px;
+  }
+
+  &__left {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #252a31, #2c323a);
+    box-shadow: 5px 5px 3px #1d2126, 0px -5px 3px #353d46;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
   }
 
-  &__list {
+  &__left-links {
+    display: flex;
+    gap: 10px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 140px;
+      height: 44px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f13f3f;
+    }
   }
 
-  &__technologies {
+  &__right {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+    background: linear-gradient(55deg, #252a31, #2c323a);
+    box-shadow: -5px 5px 3px #1d2126, 0px -5px 3px #353d46;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #9B2E20 #f1f1f1;
   }
-
-  &__img {
-  }
-
-  &__info {
-  }
-}
-.fa {
-}
-.fa-briefcase {
 }

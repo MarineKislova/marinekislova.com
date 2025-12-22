@@ -1,9 +1,10 @@
 @use "utils/_mixins" as sh;
 
 .skills {
+  padding-top: 25px;
+  padding-bottom: 25px;
   &__container {
-    margin-top: 100px !important;
-    height: 300px;
+     height: 250px;
   }
 
   &__body {
@@ -43,6 +44,13 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 64px;
+    height: 64px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 .fa {

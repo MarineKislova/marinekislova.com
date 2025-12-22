@@ -1,7 +1,8 @@
 @use "utils/_mixins" as ah;
 
 .about {
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
   &__container {
     height: 300px;

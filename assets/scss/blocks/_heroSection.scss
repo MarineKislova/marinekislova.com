@@ -1,10 +1,11 @@
 @use "utils/_mixins" as hh;
 
 .hero-section {
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   &__container {
     display: flex;
-    max-height: 600px;
+    height: 400px;
     padding-bottom: 10px;
     // border-bottom: 3px solid #F13F3F;
   }
@@ -27,6 +28,7 @@
     color: #c2bfbf;
     line-height: 1.2;
     gap: 10px;
+    z-index: 50;
 
     h1 {
       font-size: hh.fluid(32);
@@ -98,16 +100,17 @@
 
   &__right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: right;
     width: 50%;
+    height: 100%;
 
-    img {
-      max-width: 80%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 5px;
-    }
+    // img {
+    //   max-width: 100%;
+    //   // height: 100%;
+    //   object-fit: cover;
+    //   border-radius: 5px;
+    // }
   }
 }
 .fab {

@@ -23,7 +23,23 @@
               </div>
             </div>
             <div class="hero-section__right">
-              <img src="img/hero_640.jpg" alt="hero" />
+              <img
+                src="img/hero/marine-rb-1542.png"
+                sizes="100vw"
+                alt="MarineKislova"
+                loading=""
+                srcset="
+                  img/hero/marine-rb-320.png   320w,
+                  img/hero/marine-rb-375.png   375w,
+                  img/hero/marine-rb-425.png   414w,
+                  img/hero/marine-rb-768.png   768w,
+                  img/hero/marine-rb-768.png   900w,
+                  img/hero/marine-rb-1042.png 1024w,
+                  img/hero/marine-rb-1042.png 1200w,
+                  img/hero/marine-rb-1542.png 1440w,
+                  img/hero/marine-rb-1542.png 1920w
+                "
+              />
             </div>
           </div>
         </section>
@@ -68,18 +84,18 @@
                   <img src="img/javascript-1.png" alt="JavaScript" />
                   <span>JavaScript</span>
                 </div>
-                <div class="skills__item">
+                <!-- <div class="skills__item">
                   <img src="img/flex.png" alt="Flexbox" />
                   <span>Flexbox</span>
                 </div>
                 <div class="skills__item">
                   <img src="img/grid.png" alt="Grid" />
                   <span>Grid</span>
-                </div>
-                <div class="skills__item">
+                </div> -->
+                <!-- <div class="skills__item">
                   <img src="img/responsive.png" alt="Adaptive design" />
                   <span>Responsive design</span>
-                </div>
+                </div> -->
                 <div class="skills__item">
                   <img src="img/gulp-js-icon.png" alt="Gulp" />
                   <span>Gulp</span>
@@ -105,22 +121,24 @@
           </div>
         </section>
 
-        <!-- Portfolio Image Section -->
+        <!-- Portfolio Image Section
         <div class="portfolio">
           <div class="portfolio__container"></div>
-        </div>
+        </div> -->
 
         <!-- My Work Section -->
-        <section id="projects" class="myWork">
-          <div class="myWork__container">
-            <h2 class="myWork__title"><i class="fa fa-briefcase"></i>Кейсы</h2>
-            <div class="myWork__list">
-              <div class="myWork__item">
-                <div class="myWork__technologies"><span>HTML</span>CSS<span>JavaScript</span><span>Swiper</span><span>Gulp</span></div>
-                <div class="myWork__img">
-                  <img src="img/portfolio/interia.jpg" alt="Interia" />
+        <section id="projects" class="my-work">
+          <div class="my-work__container">
+            <div class="my-work__items">
+              <div class="my-work__item">
+                <div class="my-work__left">
+                  <img src="img/portfolio/interia.jpg" alt="interia" />
+                  <div class="my-work__left-links">
+                    <a href="https://marinekislova.github.io/Interia-gulp/" target="_blank" rel="noopener noreferrer">Посмотреть</a>
+                    <a href="https://github.com/MarineKislova/Interia-gulp" target="_blank" rel="noopener noreferrer">Код</a>
+                  </div>
                 </div>
-                <div class="myWork__info">
+                <div class="my-work__right">
                   <h3>Interia</h3>
                   <p>
                     Одностраничный целевой сайт, разработанный на основе макета дизайн-студии. Этот сайт оптимизирован для всех устройств, включая мобильные телефоны, планшеты и настольные компьютеры.
