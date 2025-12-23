@@ -4,18 +4,13 @@
   padding-top: 25px;
   padding-bottom: 25px;
   &__container {
-     height: 250px;
+    height: 250px;
   }
 
   &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 2.5;
-    .fa-code {
-      color: rgb(236, 251, 169);
-      font-size: sh.fluid(36);
-    }
   }
 
   &__title {
@@ -25,6 +20,7 @@
 
     .fa-code {
       color: #f13f3f;
+      font-size: sh.fluid(36);
     }
   }
 
@@ -33,10 +29,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
   }
 
   &__item {

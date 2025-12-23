@@ -14,10 +14,34 @@
   }
 
   &__logo {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    color: #f13f3f;
+    font-size: mh.fluid(24);
+    letter-spacing: 3px;
+    font-family: "JetBrains Mono";
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid orange;
+    animation: typing 4s steps(35, end), /* Анимация печати */ blink-caret 1s step-end infinite; /* Анимация курсора */
+  }
+
+  /* Анимация печати */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 15%;
+    }
+  }
+
+  /* Анимация мигающего курсора */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
     }
   }
 
@@ -80,4 +104,78 @@
 }
 .fa-envelope {
   color: #cd3021;
+}
+
+.open {
+  display: flex !important;
+}
+
+.burger {
+  // display: flex;
+  display: none;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+
+  span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #f13f3f;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #f13f3f;
+    transition: all 0.3s ease 0s;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  //add active class for animation burger icon
+  // &.active span in CSS will be without space (.burger.active)
+  // .active span in CSS will be with space (.burger. active)
+  &.active span {
+    transform: scale(0);
+  }
+  //add active class for animation burger lines
+  &.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+  }
+  &.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+  }
+}
+
+@media (min-width: 901px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+  .header__nav{
+    display: none;
+  }
+  .header__getOffer{
+    display: none;
+  }
 }
