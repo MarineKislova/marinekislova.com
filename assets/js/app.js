@@ -3,14 +3,9 @@ import * as commonFunctions from "./modules/functions.js";
 
 commonFunctions.isWebp();
 
-document.addEventListener("DOMContentLoaded", () => {
-  function toggleNav(burgerSelector, navSelector) {
-     const burger = document.querySelector(burgerSelector);
-    const nav = document.querySelector(navSelector);
-    burger.classList.toggle("active");
-    document.querySelector(nav).classList.toggle("open");
-  }
-  toggleNav(".burger", ".burger__nav-list");
-
-  console.log(document.querySelector(".burger"));
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".burger").addEventListener("click", function () {
+    this.classList.toggle("active");
+    document.querySelector(".burger__nav").classList.toggle("open");
+  });
 });

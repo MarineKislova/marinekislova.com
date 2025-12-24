@@ -7,10 +7,11 @@
   background-color: rgba(30, 30, 30, 1) !important;
   &__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 74px;
     background-color: rgba(30, 30, 30, 1) !important;
+    gap: 30px;
   }
 
   &__logo {
@@ -18,31 +19,7 @@
     font-size: mh.fluid(24);
     letter-spacing: 3px;
     font-family: "JetBrains Mono";
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 0.15em solid orange;
-    animation: typing 4s steps(35, end), /* Анимация печати */ blink-caret 1s step-end infinite; /* Анимация курсора */
-  }
-
-  /* Анимация печати */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 15%;
-    }
-  }
-
-  /* Анимация мигающего курсора */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: orange;
-    }
+    text-align: center;
   }
 
   &__nav {
@@ -87,9 +64,6 @@
     }
   }
 
-  &__offer {
-    padding: 10px;
-  }
 }
 .fa {
 }
@@ -118,10 +92,10 @@
   align-items: center;
   justify-content: flex-end;
   width: 30px;
-  height: 18px;
+  height: 25px;
 
   span {
-    height: 2px;
+    height: 3px;
     width: 80%;
     transform: scale(1);
     background-color: #f13f3f;
@@ -131,7 +105,7 @@
   &::after {
     content: "";
     position: absolute;
-    height: 4px;
+    height: 3px;
     width: 100%;
     background-color: #f13f3f;
     transition: all 0.3s ease 0s;
@@ -168,14 +142,54 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .burger {
     display: flex;
   }
-  .header__nav{
+  .header__nav {
     display: none;
   }
-  .header__getOffer{
+  .header__getOffer {
     display: none;
+  }
+  .burger__nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 74px;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    text-align: right;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: rgba(41, 47, 54, 0.51);
+    background-color: rgba(41, 47, 54, 1);
+    animation: burgerAnimation 1s;
+
+    ul {
+      display: flex !important;
+      flex-direction: column;
+      gap: 30px;
+
+      a {
+        i {
+          padding-right: 25px;
+        }
+      }
+    }
+
+    @keyframes burgerAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
