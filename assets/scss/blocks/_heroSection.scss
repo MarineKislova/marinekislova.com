@@ -3,22 +3,39 @@
 .hero-section {
   padding-top: 25px;
   padding-bottom: 25px;
+   @include hh.adaptiv-value("padding-top", 25, 10, 0);
+  @include hh.adaptiv-value("padding-bottom", 25, 5, 0);
   &__container {
     display: flex;
     height: 100%;
     padding-bottom: 10px;
-    font-family: "JetBrains Mono";
+    // font-family: "JetBrains Mono";
     background-image: url(../../img/hero/marine-rb-1042.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (max-width: 768px) {
+      background-image: url(../../img/hero/marine-rb-768.png);
+    }
+
+    @media (max-width: 425px) {
+      background-image: url(../../img/hero/marine-rb-425.png);
+    }
+    @media (max-width: 375px) {
+      background-image: url(../../img/hero/marine-rb-375.png);
+    }
+
+    @media (max-width: 320px) {
+      background-image: url(../../img/hero/marine-rb-320.png);
+    }
   }
 
   &__social-icon-bar {
     display: flex;
     flex-direction: column;
     @include hh.adaptiv-value("gap", 20, 10, 0);
-    // width: 20%;
+    width: 15%;
     a {
       display: flex;
       text-align: center;
@@ -45,9 +62,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    text-indent: 1%;
-    width: 280px;
-    gap: 30px;
+    width: 80%;
+    @include hh.adaptiv-value("gap", 30, 10, 0);
   }
 
   &__title {
@@ -59,6 +75,11 @@
     line-height: 1.2;
     gap: 10px;
     z-index: 50;
+
+    @media (max-width: 425px) {
+      backdrop-filter: blur(1px) saturate(150%);
+      background-color: rgba(41, 47, 54, 0.35);
+    }
 
     h1 {
       @include hh.adaptiv-value("font-size", 32, 24, 0);

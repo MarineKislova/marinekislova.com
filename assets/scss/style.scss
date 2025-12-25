@@ -10,8 +10,8 @@
 @use "blocks/_heroSection.scss";
 @use "blocks/_about.scss";
 @use "blocks/_skills.scss";
-@use "blocks/_portfolio.scss";
 @use "blocks/_myWork.scss";
+@use "blocks/_contact.scss";
 @use "blocks/_footer.scss";
 
 .wrapper {
@@ -20,7 +20,7 @@
   overflow-x: clip;
   display: flex;
   flex-direction: column;
-  background-color: #292f36;
+  background-color: rgb(41, 47, 54);
   // background-color: #202020;
 }
 .content {

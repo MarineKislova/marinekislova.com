@@ -1,11 +1,11 @@
 @use "utils/_mixins" as ah;
 
 .about {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  @include ah.adaptiv-value("padding-top", 25, 15, 0);
+  @include ah.adaptiv-value("padding-bottom", 25, 5, 0);
 
   &__container {
-    height: 400px;
+    height: 100%;
   }
 
   &__body {
@@ -13,23 +13,22 @@
     flex-direction: column;
     align-items: center;
     align-content: space-evenly;
-    line-height: 2.5;
+    @include ah.adaptiv-value("line-height", 40, 24, 0);
 
     .fa-user {
-      font-size: ah.fluid(36);
+      @include ah.adaptiv-value("font-size", 36, 27, 0);
     }
   }
 
   &__title {
-    font-size: ah.fluid(32);
+    @include ah.adaptiv-value("font-size", 32, 24, 0);
     text-align: center;
-    padding-bottom: 20px;
+    @include ah.adaptiv-value("padding-bottom", 20, 10, 0);
     font-family: "Roboto";
   }
 
   &__list {
-
-
+    @include ah.adaptiv-value("font-size", 16, 12, 0);
     li::before {
       content: "\2714"; 
       font-weight: bold; 

@@ -1,0 +1,62 @@
+@use "utils/_mixins" as ch;
+
+.contact {
+  @include ch.adaptiv-value("padding-top", 25, 15, 0);
+  @include ch.adaptiv-value("padding-bottom", 25, 5, 0);
+  &__container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0px 1px 3px 3px #444444;
+    // background-color: #1F2937;
+    // background-color: #444444;
+  }
+
+  &__left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__right {
+    width: 50%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      input[type="text"] {
+        padding: 10px;
+        border: 1px solid #444444;
+        border-radius: 5px;
+        width: 80%;
+        background-color: bisque;
+      }
+      input[type="email"] {
+        padding: 10px;
+        border: 1px solid #444444;
+        border-radius: 5px;
+        width: 80%;
+        background-color: bisque;
+      }
+      textarea {
+        padding: 10px;
+        border: 1px solid #444444;
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+.fa-solid {
+}
+.fa-phone {
+}
+.fa-brands {
+}
+.fa-telegram {
+}

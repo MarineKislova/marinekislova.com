@@ -47,12 +47,19 @@
   &__lang-panel {
     display: flex;
     gap: 10px;
-    .active {
+    .active-lang {
       color: #cd3021;
     }
   }
 
   &__lang-item {
+    border-right: 1px solid #cd3021;
+    padding-right: 15px;
+
+    &:last-child{
+      border-right: none;
+      padding-right: none;
+    }
   }
 
   &__getOffer {
@@ -63,7 +70,6 @@
       background-color: #f13f3f;
     }
   }
-
 }
 .fa {
 }
