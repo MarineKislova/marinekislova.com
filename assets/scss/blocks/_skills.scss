@@ -17,7 +17,6 @@
     font-family: "Roboto";
 
     .fa-code {
-      color: #f13f3f;
       @include sh.adaptiv-value("font-size", 36, 27, 0);
     }
   }

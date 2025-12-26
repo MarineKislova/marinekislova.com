@@ -1,4 +1,5 @@
 @use "utils/_mixins" as ah;
+@use "utils/_variable.scss" as varSt;
 
 .about {
   @include ah.adaptiv-value("padding-top", 25, 15, 0);
@@ -28,14 +29,15 @@
   }
 
   &__list {
-    @include ah.adaptiv-value("font-size", 16, 12, 0);
+    @include ah.adaptiv-value("font-size", 18, 13, 0);
     li::before {
       content: "\2714"; 
       font-weight: bold; 
       display: inline-block;
       max-width: 20px;
-      color: #CD3021;
+      color: varSt.$color-second;
       margin-right: 20px;
+      color: #6ba3fd;
     }
   }
 }

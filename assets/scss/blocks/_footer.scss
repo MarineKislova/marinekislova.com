@@ -1,11 +1,77 @@
+@use "utils/_mixins" as mh;
+@use "utils/_variable.scss" as varSt;
+
 .footer {
-  // position: fixed;
-  // left: 0;
-  // bottom: 0px;
-  // width: 100%;
-  background-color: rgba(30, 30, 30, 1) !important;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: varSt.$bg-nav !important;
+}
+
+.footer {
+  position: sticky;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  background-color: varSt.$bg-nav !important;
+
+   @media (max-width: 978px) {
+      position: static;
+    }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    background-color: varSt.$bg-nav !important;
+
+    @media (max-width: 530px) {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%;
+      padding: 8px;
+      gap: 15px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-icon-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.CV {
+  border-radius: 5px;
+  padding: 10px;
+  background: varSt.$btn-bg-prim;
+  color: varSt.$color-prim;
+
+  &:hover {
+    background: varSt.$btn-bg-prim-hover;
+    color: varSt.$btn-color-prim-hover;
+  }
+}
+
+.fa-solid {
+}
+.fa-file-pdf {
+}
+.github {
+  @include mh.adaptiv-value("font-size", 34, 25.5, 0);
+}
+.fa-brands {
+}
+.fa-github {
+}
+.linkedin {
+  @include mh.adaptiv-value("font-size", 34, 25.5, 0);
+}
+.fa-linkedin-in {
+}
+.freelancehunt {
+  background-color: varSt.$color-6;
 }

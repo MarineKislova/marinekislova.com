@@ -1,25 +1,31 @@
 @use "utils/_mixins" as mh;
+@use "utils/_variable.scss" as varSt;
 
 .header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgba(30, 30, 30, 1) !important;
+  background-color: varSt.$bg-nav !important;
   &__container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 74px;
-    background-color: rgba(30, 30, 30, 1) !important;
+    background-color: varSt.$bg-nav !important;
     gap: 30px;
+    color: varSt.$color-nav;
   }
 
   &__logo {
-    color: #f13f3f;
+    color: #e83828;
+    font-weight: 600;
     font-size: mh.fluid(24);
     letter-spacing: 3px;
     font-family: "JetBrains Mono";
     text-align: center;
+    background: linear-gradient(90deg, #3b82f6, #8a58fd, #934399, #6a2f6e);
+    background-clip: text;
+    color: transparent;
   }
 
   &__nav {
@@ -37,26 +43,23 @@
     gap: 20px;
   }
 
-  &__other {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
 
   &__lang-panel {
     display: flex;
+    @include mh.adaptiv-value("font-size", 16, 12, 0);
+    @include mh.adaptiv-value("gap", 10, 5, 0);
     gap: 10px;
     .active-lang {
-      color: #cd3021;
+      color: #c22f1f;
     }
   }
 
   &__lang-item {
-    border-right: 1px solid #cd3021;
-    padding-right: 15px;
+    border-right: 2px solid #c22f1f;
+    padding-right: 12px;
+    font-weight: 800;
 
-    &:last-child{
+    &:last-child {
       border-right: none;
       padding-right: none;
     }
@@ -71,20 +74,7 @@
     }
   }
 }
-.fa {
-}
-.fa-user {
-  color: #cd3021;
-}
-.fa-code {
-  color: #cd3021;
-}
-.fa-th {
-  color: #cd3021;
-}
-.fa-envelope {
-  color: #cd3021;
-}
+
 
 .open {
   display: flex !important;
@@ -104,7 +94,7 @@
     height: 3px;
     width: 80%;
     transform: scale(1);
-    background-color: #f13f3f;
+    background-color: #8b5cf6;
   }
 
   &::before,
@@ -113,7 +103,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #f13f3f;
+    background-color: #8b5cf6;
     transition: all 0.3s ease 0s;
   }
 

@@ -20,8 +20,7 @@
   overflow-x: clip;
   display: flex;
   flex-direction: column;
-  background-color: rgb(41, 47, 54);
-  // background-color: #202020;
+  background: linear-gradient(135deg, #162e54 0%, #234478 30%, #6b2f6f 55%, #47194a 100%);
 }
 .content {
   flex: 1 1 auto;
@@ -35,4 +34,22 @@
   @media (max-width: 1440px) {
     padding: 0px 10px;
   }
+}
+
+
+.fa-user {
+  color: #8b5cf6;
+  padding-right: 15px;
+}
+.fa-code {
+  color: #8b5cf6;
+  padding-right: 15px;
+}
+.fa-th {
+  color: #8b5cf6;
+  padding-right: 15px;
+}
+.fa-envelope {
+  color: #8b5cf6;
+  
 }
