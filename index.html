@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20251219170223" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css?_v=20260113171436" />
   <link rel="icon" href="../img/portfolio.png" type="webp/png" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20251219170223" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20260113171436" />
   <title>Web-developer Марина Кіслова</title>
 </head>
 
@@ -15,56 +15,73 @@
         <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <a href="index.html">
-        <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" /></picture>
-      </a>
+      <a href="index.html"> Marine Kislova</a>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li>
-          <a href="#about"><i class="fa fa-user"></i>Обо мне</a>
+          <a href="index.html#about"><i class="fa fa-user"></i>About me</a>
         </li>
         <li>
-          <a href=" #skills"><i class="fa fa-code"></i>Навыки</a>
+          <a href="index.html#skills"><i class="fa fa-code"></i>Skills</a>
         </li>
         <li>
-          <a href="#projects"><i class="fa fa-th"></i>Портфолио</a>
+          <a href="portfolio.html"><i class="fa fa-th"></i>Portfolio</a>
         </li>
         <li>
-          <a href="#contact"><i class="fa fa-envelope"></i>Контакты</a>
+          <a href="index.html#contact"><i class="fa fa-envelope"></i>Contacts</a>
         </li>
       </ul>
     </nav>
-    <button class="header__getOffer"><a href="#contact" class="header__offer">Обсудить проект</a></button>
     <div class="header__other">
       <ul class="header__lang-panel">
-        <li class="header__lang-item active"><a href="../index.html">UA</a></li>
+        <li class="header__lang-item active-lang"><a href="../index.html">EN</a></li>
+        <li class="header__lang-item"><a href="../ua/index.html">UA</a></li>
         <li class="header__lang-item"><a href="../ru/index.html">RU</a></li>
-        <li class="header__lang-item"><a href="../en/index.html">EN</a></li>
       </ul>
+    </div>
+    <div class="burger">
+      <span></span>
+      <nav class="burger__nav">
+        <ul class="burger__nav-list">
+          <li>
+            <a href="index.html#about"><i class="fa fa-user"></i>About me</a>
+          </li>
+          <li>
+            <a href="index.html#skills"><i class="fa fa-code"></i>Skills</a>
+          </li>
+          <li>
+            <a href="portfolio.html"><i class="fa fa-th"></i>Portfolio</a>
+          </li>
+          <li>
+            <a href="index.html#contact"><i class="fa fa-envelope"></i>Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
 
         <!--  -->
-
+        <!-- <div class="social-icon-bar">
+          <a href="https://github.com/MarineKislova" target="_blank" rel="noopener noreferrer" class="github"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/maryna-kislova/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div> -->
         <!-- Hero Section  -->
         <section class="hero-section">
           <div class="hero-section__container">
             <div class="hero-section__left">
               <div class="hero-section__title">
-                <p>👋 Здравствуйте, меня зовут Марина</p>
-                <h1>Я начинающий Frontend Developer, готовый воплотить вашу идею в живой сайт</h1>
-                <h2>HTML, SCSS, JavaScript — создаю адаптивные сайты с чистым кодом</h2>
-                <p>Ваш проект — вы получаете результат, я — бесценный опыт</p>
+                <p>👋 Hello, my name is Marina!</p>
+                <h1>Front-End Developer</h1>
+                <h2>I create websites that are a pleasure to use—with a well-designed interface and attention to every detail.</h2>
               </div>
               <div class="hero-section__links">
-                <a href="portfolio.html"> Проекты </a>
-                <a href="https://github.com/MarineKislova" target="_blank" rel="noopener noreferrer"> GitHub</a>
+                <a href="#" class="CV"><i class="fa-solid fa-file-pdf"></i> Download CV</a>
               </div>
             </div>
             <div class="hero-section__right">
-              <picture><source srcset="img/hero_640.webp" type="image/webp"><img src="img/hero_640.jpg" alt="hero" /></picture>
+              <picture><source srcset="img/hero/marine-rb-1542.webp" type="image/webp"><img src="img/hero/marine-rb-1542.png" alt="MarineKislova" /></picture>
             </div>
           </div>
         </section>
@@ -74,14 +91,28 @@
           <div class="about__container">
             <div class="about__body">
               <!-- <p><i class="fa fa-user"></i></p> -->
-              <h2 class="about__title"><i class="fa fa-user"></i> Обо мне</h2>
-              <ul class="about__list">
-                <li>Специализируюсь на вёрстке адаптивных сайтов с использованием HTML, SCSS и JavaScript.</li>
-                <li>Мой подход: валидный код, оптимизация производительности, тестирование на разных устройствах.</li>
+              <h2 class="about__title"><i class="fa fa-user"></i> About me</h2>
+              <div class="about__content">
+                <p>I specialize in creating responsive websites that work correctly on all devices and in different browsers.</p>
+                <p>
+                  I work with HTML, SCSS, Bootstrap, and JavaScript. I use Flexbox and CSS Grid to create responsive interfaces and ensure cross-browser compatibility. I connect service APIs via
+                  Fetch, add animations and interactivity, and use Gulp to automate routine tasks.
+                </p>
+                <p>
+                  My approach is to write valid, understandable code and optimize performance. I thoroughly test the results on different devices. I strive not only to solve a problem, but to understand the optimal solution and bring the project to a high-quality result.
+                </p>
+              </div>
+
+              <!-- <ul class="about__list">
+                <li>Занимаюсь разработкой и поддержкой веб-сайтов. Работаю с HTML, SCSS, Bootstrap, Javascript. Уделяю внимание деталям и скорости загрузки.</li>
+                <li>Осуществляю отзывчивую (responsive) верстку с использованием Flexbox и CSS Grid, поддержку основных брейкпоинтов и кроссбраузерность.</li>
+                <li>Реализую интеграцию с REST API сторонних сервисов с использованием Fetch API для отображения данных.</li>
+                <li>Добавляю интерактивные елементы и анимации при помощи CSS и JavaScript</li>
                 <li>Использую Gulp для автоматизации сборки проектов.</li>
-                <li>Работаю с Flexbox и Grid, уделяю внимание деталям и скорости загрузки.</li>
-                <li>Для меня важно не просто сделать "чтобы работало", а разобраться, как это работает правильно. Готова дорабатывать проект до идеального результата.</li>
-              </ul>
+                <li>Дорабатываю страницы и компоненты, тестирую и исправляю ошибки.</li>
+                <li>Мой подход: валидный код, оптимизация производительности, тестирование на разных устройствах.</li>
+                <li>Для меня важно не просто сделать "чтобы работало", а разобраться как это работает правильно. Готова дорабатывать проект до идеального результата.</li>
+              </ul> -->
             </div>
           </div>
         </section>
@@ -91,7 +122,7 @@
           <div class="skills__container">
             <div class="skills__body">
               <!-- <p><i class="fa fa-code"></i></p> -->
-              <h2 class="skills__title"><i class="fa fa-code"></i> Навыки</h2>
+              <h2 class="skills__title"><i class="fa fa-code"></i> Skills</h2>
               <div class="skills__list">
                 <div class="skills__item">
                   <picture><source srcset="img//html_1.webp" type="image/webp"><img src="img//html_1.png" alt="HTML" /></picture>
@@ -109,21 +140,23 @@
                   <picture><source srcset="img/javascript-1.webp" type="image/webp"><img src="img/javascript-1.png" alt="JavaScript" /></picture>
                   <span>JavaScript</span>
                 </div>
-                <div class="skills__item">
-                  <picture><source srcset="img/flex.webp" type="image/webp"><img src="img/flex.png" alt="Flexbox" /></picture>
-                  <span>Flexbox</span>
-                </div>
+
+                <!-- 
                 <div class="skills__item">
                   <picture><source srcset="img/grid.webp" type="image/webp"><img src="img/grid.png" alt="Grid" /></picture>
                   <span>Grid</span>
-                </div>
-                <div class="skills__item">
+                </div> -->
+                <!-- <div class="skills__item">
                   <picture><source srcset="img/responsive.webp" type="image/webp"><img src="img/responsive.png" alt="Adaptive design" /></picture>
                   <span>Responsive design</span>
-                </div>
+                </div> -->
                 <div class="skills__item">
                   <picture><source srcset="img/gulp-js-icon.webp" type="image/webp"><img src="img/gulp-js-icon.png" alt="Gulp" /></picture>
                   <span>Gulp</span>
+                </div>
+                <div class="skills__item">
+                  <picture><source srcset="img/bootstrap.webp" type="image/webp"><img src="img/bootstrap.png" alt="Bootstrap" /></picture>
+                  <span>Bootstrap</span>
                 </div>
                 <div class="skills__item">
                   <picture><source srcset="img/git.webp" type="image/webp"><img src="img/git.png" alt="Git" /></picture>
@@ -137,51 +170,42 @@
                   <picture><source srcset="img/zeplin.webp" type="image/webp"><img src="img/zeplin.png" alt="Zeplin" /></picture>
                   <span>Zeplin</span>
                 </div>
-                <div class="skills__item">
+                <!--                 <div class="skills__item">
                   <picture><source srcset="img/devtools.webp" type="image/webp"><img src="img/devtools.jpg" alt="DevTools" /></picture>
                   <span>DevTools</span>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Portfolio Image Section -->
-        <div class="portfolio">
-          <div class="portfolio__container"></div>
-        </div>
-
-        <!-- My Work Section -->
-        <section id="projects" class="myWork">
-          <div class="myWork__container">
-            <h2 class="myWork__title"><i class="fa fa-briefcase"></i>Кейсы</h2>
-            <div class="myWork__list">
-              <div class="myWork__item">
-                <div class="myWork__technologies"><span>HTML</span>CSS<span>JavaScript</span><span>Swiper</span><span>Gulp</span></div>
-                <div class="myWork__img">
-                  <picture><source srcset="img/portfolio/interia.webp" type="image/webp"><img src="img/portfolio/interia.jpg" alt="Interia" /></picture>
-                </div>
-                <div class="myWork__info">
-                  <h3>Interia</h3>
-                  <p>
-                    Одностраничный целевой сайт, разработанный на основе макета дизайн-студии. Этот сайт оптимизирован для всех устройств, включая мобильные телефоны, планшеты и настольные компьютеры.
-                    Удобная навигация для мобильных устройств. Интегрирована библиотека SwiperJS для интерактивных слайдов и функции прокрутки на мобильных устройствах.
-                  </p>
-                  <p>Изображения оптимизированы в webp</p>
-                  <p>Сайт успешно прошел проверку на валидаторе W3C. Google speed test показал высокие показатели (более 96%). Протестирован в основных браузерах.</p>
-                </div>
-              </div>
-            </div>
+        <!-- Contact Section  -->
+        <section id="contact" class="contact">
+          <div class="contact__container">
+            <h2><i class="fa fa-envelope"></i>Contact me</h2>
+            <a href="tel:+380955221952"><i class="fa-solid fa-phone"></i>+38 095 522 19 52</a>
+            <a href="https://t.me/marinekislova" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>@marinekislova</a>
+            <a href="mailto:marinekislova@gmail.com"><i class="fa-solid fa-envelope-open-text"></i>marinekislova@gmail.com</a>
           </div>
         </section>
       </main>
     </div>
     <!--  -->
     <footer class="footer">
-    <div class="footer__container">
-        <p>�� 2025, MarineKislova.com</p>
+  <div class="footer__container">
+    <p>&copy; <span id="dataFooter">2025</span>, MarineKislova.com</p>
+    <div class="footer__social-icon-bar">
+      <a href="https://github.com/MarineKislova" target="_blank" rel="noopener noreferrer" class="github"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/maryna-kislova/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
+    <div class="footer__freelance">
+      <a href="https://freelancehunt.com/freelancer/marinekislova.html?from=shield&r=32kL7" target="_blank"
+        ><img src="https://freelancehunt.com/shields/display/id/728794/type/rating?style=plastic&lang=ru" alt="Freelancehunt — простой и честный фриланс"
+      /></a>
+    </div>
+  </div>
 </footer>
-    <script src="js/app.min.js?_v=20251219170223"></script>
+
+    <script src="js/app.min.js?_v=20260113171436"></script>
   </body>
 </html>
