@@ -22,8 +22,8 @@ import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 // импорт задач из ru.js
 import { ru } from "./gulp/tasks/ru.js";
-// импорт задач из en.js
-import { en } from "./gulp/tasks/en.js";
+// импорт задач из ua.js
+import { ua } from "./gulp/tasks/ua.js";
 // импорт сервера browsersync для локального сервера
 import { server } from "./gulp/tasks/server.js";
 // импорт scss из scss.js
@@ -49,7 +49,7 @@ function watchAssets() {
   gulp.watch(path.watch.html, html);
   // gulp.watch(path.watch.html, gulp.series(html, ftp)); // если хотим чтобы побубликовалось сразу после публикации в ftp и так нужно сделать с каждм watch
   gulp.watch(path.watch.ru, ru);
-  gulp.watch(path.watch.en, en);
+  gulp.watch(path.watch.ua, ua);
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
@@ -61,7 +61,7 @@ export { svgSpriteTask };
 const fontsTasks = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // основные задачи для сборки проекта с использованием fonts.js
-const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, ru, en, scss, js, images));
+const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, ru, ua, scss, js, images));
 
 // // основные задачи для сборки проекта
 // const mainTasks = gulp.parallel(copy, html, ru, scss, js, images); // параллельное выполнение html и copy

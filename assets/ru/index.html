@@ -6,24 +6,132 @@
       <main class="content">
         @@include('htmlRu/headerRu.html', {})
         <!--  -->
-        <div class="main">
-          <h1>Бухгалетр ФОП, ведение бухгалтерского учета ФОП</h1>
-          <div class="mainRu">
-            <div class="mainRu__container">
-              <div class="mainRu__body">
-                <h2>Привет, это русская версия сайта бухгалтерии ФОП.</h2>
-                <p>Это место для вашего текста, который будет отображаться на русском языке.</p>
+        <!-- Hero Section  -->
+        <section class="hero-section">
+          <div class="hero-section__container">
+            <div class="hero-section__left">
+              <div class="hero-section__title">
+                <p>👋 Здравствуйте, меня зовут Марина!</p>
+                <h1>Front-End разработчик</h1>
+                <h2>Создаю сайты, которые приятно использовать — с продуманным интерфейсом и вниманием к каждой детали.</h2>
+              </div>
+              <div class="hero-section__links">
+                <a href="#" class="CV"><i class="fa-solid fa-file-pdf"></i>Скачать резюме</a>
+              </div>
+            </div>
+            <div class="hero-section__right">
+              <img src="../img/hero/marine-rb-1542.png" alt="MarineKislova" />
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section  -->
+        <section id="about" class="about">
+          <div class="about__container">
+            <div class="about__body">
+              <!-- <p><i class="fa fa-user"></i></p> -->
+              <h2 class="about__title"><i class="fa fa-user"></i> Обо мне</h2>
+              <div class="about__content">
+                <p>Специализируюсь на создании адаптивных веб-сайтов, которые корректно работают на всех устройствах и в разных браузерах.</p>
                 <p>
-                  Вы можете добавить ссылки на другие страницы вашего сайта, сделав их активными внутри этого текста.
+                  Работаю с HTML, SCSS, Bootstrap и JavaScript. Верстаю на Flexbox и CSS Grid, делаю адаптивные интерфейсы и слежу за кроссбраузерностью. Подключаю API сервисов через Fetch, добавляю
+                  анимации и интерактивность. Использую Gulp для автоматизации рутины.
                 </p>
+                <p>
+                  Мой подход — писать валидный, понятный код и оптимизировать производительность. Тщательно тестирую результат на разных устройствах. Стремлюсь не просто решить задачу, а понять
+                  оптимальный способ её решения и довести проект до качественного результата.
+                </p>
+              </div>
+
+              <!-- <ul class="about__list">
+                <li>Занимаюсь разработкой и поддержкой веб-сайтов. Работаю с HTML, SCSS, Bootstrap, Javascript. Уделяю внимание деталям и скорости загрузки.</li>
+                <li>Осуществляю отзывчивую (responsive) верстку с использованием Flexbox и CSS Grid, поддержку основных брейкпоинтов и кроссбраузерность.</li>
+                <li>Реализую интеграцию с REST API сторонних сервисов с использованием Fetch API для отображения данных.</li>
+                <li>Добавляю интерактивные елементы и анимации при помощи CSS и JavaScript</li>
+                <li>Использую Gulp для автоматизации сборки проектов.</li>
+                <li>Дорабатываю страницы и компоненты, тестирую и исправляю ошибки.</li>
+                <li>Мой подход: валидный код, оптимизация производительности, тестирование на разных устройствах.</li>
+                <li>Для меня важно не просто сделать "чтобы работало", а разобраться как это работает правильно. Готова дорабатывать проект до идеального результата.</li>
+              </ul> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section  -->
+        <section id="skills" class="skills">
+          <div class="skills__container">
+            <div class="skills__body">
+              <!-- <p><i class="fa fa-code"></i></p> -->
+              <h2 class="skills__title"><i class="fa fa-code"></i> Навыки</h2>
+              <div class="skills__list">
+                <div class="skills__item">
+                  <img src="../img//html_1.png" alt="HTML" />
+                  <span>HTML</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/css_1.png" alt="CSS" />
+                  <span>CSS</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/sass.png" alt="SCSS" />
+                  <span>SCSS</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/javascript-1.png" alt="JavaScript" />
+                  <span>JavaScript</span>
+                </div>
+
+                <!-- 
+                <div class="skills__item">
+                  <img src="img/grid.png" alt="Grid" />
+                  <span>Grid</span>
+                </div> -->
+                <!-- <div class="skills__item">
+                  <img src="img/responsive.png" alt="Adaptive design" />
+                  <span>Responsive design</span>
+                </div> -->
+                <div class="skills__item">
+                  <img src="../img/gulp-js-icon.png" alt="Gulp" />
+                  <span>Gulp</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/bootstrap.png" alt="Bootstrap" />
+                  <span>Bootstrap</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/git.png" alt="Git" />
+                  <span>Git</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/figma.png" alt="Figma" />
+                  <span>Figma</span>
+                </div>
+                <div class="skills__item">
+                  <img src="../img/zeplin.png" alt="Zeplin" />
+                  <span>Zeplin</span>
+                </div>
+                <!--                 <div class="skills__item">
+                  <img src="img/devtools.jpg" alt="DevTools" />
+                  <span>DevTools</span>
+                </div> -->
               </div>
             </div>
           </div>
-        </div>
-        <!--  -->
-        @@include('htmlRu/footerRu.html', {})
+        </section>
+
+        <!-- Contact Section  -->
+        <section id="contact" class="contact">
+          <div class="contact__container">
+            <h2><i class="fa fa-envelope"></i>Свяжитесь со мной</h2>
+            <a href="tel:+380955221952"><i class="fa-solid fa-phone"></i>+38 095 522 19 52</a>
+            <a href="https://t.me/marinekislova" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>@marinekislova</a>
+            <a href="mailto:marinekislova@gmail.com"><i class="fa-solid fa-envelope-open-text"></i>marinekislova@gmail.com</a>
+          </div>
+        </section>
       </main>
     </div>
+    <!--  -->
+    @@include('htmlRu/footerRu.html', {})
     <script src="../js/app.min.js"></script>
   </body>
 </html>

@@ -69,8 +69,8 @@
       color: varSt.$color-prim;
 
       &:hover {
-        background: varSt.$btn-bg-prim-hover;
-        color: varSt.$btn-color-prim-hover;
+        background: linear-gradient(45deg, #0f1f38 0%, #2e4177 25%, #94459a 85%, #b535be 100%);
+        box-shadow: 1px 4px 8px #000000;
       }
     }
   }
@@ -78,10 +78,13 @@
   &__right {
     display: flex;
     justify-content: center;
-    width: 170px;
+    width: 270px;
+    // height: 270px;
     border-radius: 20px;
     box-shadow: 2px 4px 6px #000000;
-    
+    background-color: #2e4177;
+    background-color: #0f1f38;
+    background: linear-gradient(45deg, #0f1f38 0%, #1c2848 45%, #2e4177 75%, #0b141a 100%);
 
     img {
       width: 100%;

@@ -28,6 +28,11 @@
     font-family: "Roboto";
   }
 
+  &__content{
+    @include ah.adaptiv-value("font-size", 18, 13, 0);
+    text-indent: 3%
+  }
+
   &__list {
     @include ah.adaptiv-value("font-size", 18, 13, 0);
     li::before {

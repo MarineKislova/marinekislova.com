@@ -12,10 +12,10 @@ import versionNumber from "gulp-version-number";
 // npm install -D gulp-pug
 // import pug from "gulp-pug";
 
-export const en = () => {
+export const ua = () => {
   return (
     app.gulp
-      .src(app.path.src.en)
+      .src(app.path.src.ua)
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
@@ -68,7 +68,7 @@ export const en = () => {
           })
         )
       )
-      .pipe(app.gulp.dest(app.path.build.en))
+      .pipe(app.gulp.dest(app.path.build.ua))
       .pipe(app.plugins.browserSync.stream()) //обновление браузера при изменении файла
   );
 };

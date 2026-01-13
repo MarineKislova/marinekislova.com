@@ -12,7 +12,7 @@ export const path = {
     fonts: `${buildFolder}/fonts/`,
     html: `${buildFolder}/`,
     ru: `${buildFolder}/ru/`,
-    en: `${buildFolder}/en/`,
+    ua: `${buildFolder}/ua/`,
     files: `${buildFolder}/files/`,
   },
   src: {
@@ -22,7 +22,7 @@ export const path = {
     svg: `${srcFolder}/img/**/*.svg`,
     html: `${srcFolder}/*.html`, //.pug
     ru: `${srcFolder}/ru/*.html`, //.pug
-    en: `${srcFolder}/en/*.html`, //.pug
+    ua: `${srcFolder}/ua/*.html`, //.pug
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/icons/*.svg`,
   },
@@ -32,7 +32,7 @@ export const path = {
     images: `${srcFolder}img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     html: `${srcFolder}/**/*.html`, //.pug
     ru: `${srcFolder}/**/*.html`, //.pug
-    en: `${srcFolder}/**/*.html`, //.pug
+    ua: `${srcFolder}/**/*.html`, //.pug
     files: `${srcFolder}/files/**/*.*`,
   },
   clean: buildFolder,
