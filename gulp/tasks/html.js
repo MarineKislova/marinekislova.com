@@ -34,6 +34,7 @@ export const html = () => {
 		}))
 		*/
       .pipe(app.plugins.replace(/\/?assets\/img\//g, "img/")) 
+      .pipe(app.plugins.replace(/href="\.\.\//g, 'href="')) 
       .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg())) //!если использовать responsive верстку для картинок, этот pipe закомментировать, а следающий раскомментировать внизу
       //   .pipe(
       //   app.plugins.if(
