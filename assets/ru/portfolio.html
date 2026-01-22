@@ -49,22 +49,53 @@
         <section class="portfolio">
           <div class="portfolio__container">
             <h2 class="portfolio__title">Мои проекты</h2>
-            <!-- <div class="portfolio__filters">
+            <div class="portfolio__filters">
               <button class="filter-btn active" data-filter="all">Все</button>
               <button class="filter-btn" data-filter="demo">Demo-проекты</button>
               <button class="filter-btn" data-filter="css-tools">CSS Tools</button>
               <button class="filter-btn" data-filter="wordpress">WordPress</button>
-            </div> -->
+            </div>
             <div class="portfolio__subtitle">В этом разделе представлены учебные демо-проекты и реальные работы</div>
           </div>
           <div class="portfolio__items">
             <div class="portfolio__item" data-category="demo">
-              <img src="../img/portfolio/mastersHub-portfolio_640.png" alt="mastersHub" />
               <h3 class="portfolio__item-title">Demo MastersHub</h3>
+              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
+
+              <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
+            </div>
+            <div class="portfolio__item" data-category="demo">
+              <h3 class="portfolio__item-title">Demo MastersHub</h3>
+              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
+
+              <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
+            </div>
+            <div class="portfolio__item" data-category="demo">
+              <h3 class="portfolio__item-title">Demo MastersHub</h3>
+              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
+
               <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
             </div>
           </div>
         </section>
+
+        <!-- modal windows -->
+        <div id="modal1" class="modal">
+          <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <div class="modal__description">
+              <h3>Demo MastersHub</h3>
+              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
+              <p>Слайдеры, модальные окна, табы, аккордеоны и бургер-меню реализованы без сторонних библиотек.</p>
+              <p>Страница полностью адаптивна для разных экранов.</p>
+              <p>Производительность оптимизирована с акцентом на Core Web Vitals; PageSpeed ограничен внешними видео.</p>
+            </div>
+            <div class="modal__links">
+              <a href="https://marinekislova.github.io/Interia-gulp/" target="_blank" rel="noopener noreferrer">Visit</a>
+              <a href="https://github.com/MarineKislova/MastersHub-gulp.git" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <!--  -->
