@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Портфолио Frontend-разработчика | Марина Кислова</title>
+    <title>Марина Кислова | Портфолио Frontend-разработчика</title>
 
     <meta name="description" content="Портфолио frontend-разработчика. Адаптивные сайты, лендинги и демонстрационные проекты. Кликните по проектам для просмотра демо и кода." />
 
@@ -48,52 +48,28 @@
 
         <section class="portfolio">
           <div class="portfolio__container">
-            <h2 class="portfolio__title">Мои проекты</h2>
+            <h1 class="portfolio__title">Практический опыт и разработки</h1>
+            <h2 class="portfolio__subtitle">От концептов до production-решений</h2>
             <div class="portfolio__filters">
               <button class="filter-btn active" data-filter="all">Все</button>
               <button class="filter-btn" data-filter="demo">Demo-проекты</button>
               <button class="filter-btn" data-filter="css-tools">CSS Tools</button>
               <button class="filter-btn" data-filter="wordpress">WordPress</button>
             </div>
-            <div class="portfolio__subtitle">В этом разделе представлены учебные демо-проекты и реальные работы</div>
           </div>
-          <div class="portfolio__items">
-            <div class="portfolio__item" data-category="demo">
-              <h3 class="portfolio__item-title">Demo MastersHub</h3>
-              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
-
-              <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
-            </div>
-            <div class="portfolio__item" data-category="demo">
-              <h3 class="portfolio__item-title">Demo MastersHub</h3>
-              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
-
-              <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
-            </div>
-            <div class="portfolio__item" data-category="demo">
-              <h3 class="portfolio__item-title">Demo MastersHub</h3>
-              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
-
-              <button class="portfolio__btn" data-modal="modal1">Подробнее</button>
-            </div>
+          <div class="portfolio__items" id="portfolioRU">
+            <!-- here goes item -->
           </div>
         </section>
 
         <!-- modal windows -->
-        <div id="modal1" class="modal">
+        <div id="portfolio-modal" class="modal">
           <div class="modal__content">
             <span class="modal__close">&times;</span>
-            <div class="modal__description">
-              <h3>Demo MastersHub</h3>
-              <img src="../img/portfolio/mastersHub-portfolio_640-removebg.png" alt="mastersHub" />
-              <p>Слайдеры, модальные окна, табы, аккордеоны и бургер-меню реализованы без сторонних библиотек.</p>
-              <p>Страница полностью адаптивна для разных экранов.</p>
-              <p>Производительность оптимизирована с акцентом на Core Web Vitals; PageSpeed ограничен внешними видео.</p>
-            </div>
-            <div class="modal__links">
-              <a href="https://marinekislova.github.io/Interia-gulp/" target="_blank" rel="noopener noreferrer">Visit</a>
-              <a href="https://github.com/MarineKislova/MastersHub-gulp.git" target="_blank" rel="noopener noreferrer">Code</a>
-            </div>
+            <div id="modal-title" class="modal__title"></div>
+            <div id="modal-image" class="modal__image"></div>
+            <div id="modal-links" class="modal__links"></div>
+            <div id="modal-description" class="modal__description"></div>
           </div>
         </div>
       </main>

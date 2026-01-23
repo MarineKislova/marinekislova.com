@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Developer Portfolio | Marine Kislova</title>
+    <title>Marine Kislova | Frontend Developer Portfolio</title>
 
     <meta name="description" content="Portfolio of frontend developer. Adaptive websites, landing pages, and demo projects. Click projects to view demo or code." />
 
@@ -45,6 +45,34 @@
       <main class="content">
         @@include('html/header.html', {})
         <!--  -->
+
+        <section class="portfolio">
+          <div class="portfolio__container">
+            <h1 class="portfolio__title">Practical experience and developments</h1>
+            <h2 class="portfolio__subtitle">From concepts to production solutions</h2>
+            <div class="portfolio__filters">
+              <button class="filter-btn active" data-filter="all">Все</button>
+              <button class="filter-btn" data-filter="demo">Demo-проекты</button>
+              <button class="filter-btn" data-filter="css-tools">CSS Tools</button>
+              <button class="filter-btn" data-filter="wordpress">WordPress</button>
+            </div>
+            
+          </div>
+          <div class="portfolio__items" id="portfolioEN">
+            <!-- here goes item -->
+          </div>
+        </section>
+
+        <!-- modal windows -->
+        <div id="portfolio-modal" class="modal">
+          <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <div id="modal-title" class="modal__title"></div>
+            <div id="modal-image" class="modal__image"></div>
+            <div id="modal-links" class="modal__links"></div>
+            <div id="modal-description" class="modal__description"></div>
+          </div>
+        </div>
       </main>
     </div>
     <!--  -->

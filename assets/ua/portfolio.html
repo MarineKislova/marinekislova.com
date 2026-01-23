@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Портфоліо Frontend-розробника | Марина Кіслова</title>
+    <title>Марина Кіслова | Портфоліо Frontend-розробника</title>
 
     <meta name="description" content="Портфоліо frontend-розробника. Адаптивні сайти, лендинги та демонстраційні проєкти. Натисніть на проєкти, щоб переглянути демо та код." />
 
@@ -45,6 +45,32 @@
       <main class="content">
         @@include('htmlUA/headerUA.html', {})
         <!--  -->
+
+        <section class="portfolio">
+          <div class="portfolio__container">
+            <h1 class="portfolio__title">Практичний досвід та розробки</h1>
+            <h2 class="portfolio__subtitle">Від концептів до production-рішень</h2>
+            <div class="portfolio__filters">
+              <button class="filter-btn active" data-filter="all">Все</button>
+              <button class="filter-btn" data-filter="demo">Demo-проекты</button>
+              <button class="filter-btn" data-filter="css-tools">CSS Tools</button>
+              <button class="filter-btn" data-filter="wordpress">WordPress</button>
+            </div>
+          <div class="portfolio__items" id="portfolioUA">
+            <!-- here goes item -->
+          </div>
+        </section>
+
+        <!-- modal windows -->
+         <div id="portfolio-modal" class="modal">
+          <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <div id="modal-title" class="modal__title"></div>
+            <div id="modal-image" class="modal__image"></div>
+            <div id="modal-links" class="modal__links"></div>
+            <div id="modal-description" class="modal__description"></div>
+          </div>
+        </div>
       </main>
     </div>
     <!--  -->

@@ -5,20 +5,35 @@
   @include mh.adaptiv-value("padding-top", 25, 15, 0);
   @include mh.adaptiv-value("padding-bottom", 25, 5, 0);
   &__container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    @include mh.adaptiv-value(" gap", 20, 14, 0);
   }
 
   &__title {
-    font-size: 2.5rem;
+    @include mh.adaptiv-value("font-size", 30, 21, 0);
     text-align: center;
-    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    text-shadow: 
+    1px 1px 0px #8B5CF6,
+    2px 2px 0px #8B5CF6,
+    -2px 2px 0px #754ad8,
+    0px 0px 10px rgba(0,0,0,0.5);
+  }
+
+  &__subtitle {
+    text-align: center;
+    line-height: 1.5;
+    color: varSt.$color-second;
   }
 
   &__filters {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 10px;
+    margin-bottom: 30px;
   }
 
   .filter-btn {
@@ -38,16 +53,15 @@
     box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
   }
 
-  &__subtitle {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: varSt.$color-second;
-  }
+  
 
   &__items {
+    max-width: 1024px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 32px;
+    
     // padding: 0px 15px;
     @include mh.adaptiv-value("padding-left", 20, 10, 0);
     @include mh.adaptiv-value("padding-right", 20, 10, 0);
@@ -62,7 +76,9 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-2px);
@@ -110,16 +126,20 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow-y: auto;
   &__content {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: #d893ff;
-    color: #474242;
+    background: linear-gradient(135deg, #162e54 0%, #234478 30%, #6b2f6f 55%, #47194a 100%);
+    background: #6b2f6f;
+    color: varSt.$color-prim;
     padding: 2rem;
     border-radius: 12px;
     max-width: 600px;
     width: 90%;
+    // max-height: 500px;
+    // overflow-y: auto;
     position: relative;
     text-align: center;
   }
@@ -139,26 +159,38 @@
     }
   }
 
+  &__title {
+    @include mh.adaptiv-value("font-size", 24, 16.8, 0);
+    font-weight: 700;
+  }
+
+  &__image{
+    img {
+      width: 50%;
+      display: flex;
+      justify-self: center;
+      object-fit: cover;
+    }
+  }
+
   &__description {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: justify;
     text-indent: 2%;
     text-justify: auto;
-    @include mh.adaptiv-value("font-size", 24, 16.8, 0);
+    @include mh.adaptiv-value("font-size", 20, 16.8, 0);
     line-height: 1.5;
 
     h3 {
       text-align: center;
-      font-weight: 700;
+      font-weight: 600;
+      border-bottom: 1px solid varSt.$color-second;
+      border-bottom: 1px solid #3b82f6;
     }
 
-    img{
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      margin-bottom: 16px;
-    }
+    
   }
 
   &__links {
@@ -175,6 +207,11 @@
       color: #fff;
       cursor: pointer;
       box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
+
+      &:hover {
+        background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
+        box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+      }
     }
   }
 }
