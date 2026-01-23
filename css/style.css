@@ -611,24 +611,41 @@ h6 {
 }
 
 .portfolio__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
+  gap: calc(14px + 6 * (100vw - 320px) / (2560 - 320));
 }
 
 .portfolio__title {
-  font-size: 2.5rem;
+  font-size: calc(21px + 9 * (100vw - 320px) / (2560 - 320));
   text-align: center;
-  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 0px #8B5CF6, 2px 2px 0px #8B5CF6, -2px 2px 0px #754ad8, 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio__subtitle {
+  text-align: center;
+  line-height: 1.5;
+  color: #c3cfde;
 }
 
 .portfolio__filters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .portfolio .filter-btn {
@@ -651,17 +668,13 @@ h6 {
           box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
 }
 
-.portfolio__subtitle {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #c3cfde;
-}
-
 .portfolio__items {
+  max-width: 1024px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 32px;
   padding-left: calc(10px + 10 * (100vw - 320px) / (2560 - 320));
   padding-right: calc(10px + 10 * (100vw - 320px) / (2560 - 320));
 }
@@ -734,6 +747,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 .modal__content {
@@ -745,8 +759,9 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  background: #d893ff;
-  color: #474242;
+  background: linear-gradient(135deg, #162e54 0%, #234478 30%, #6b2f6f 55%, #47194a 100%);
+  background: #6b2f6f;
+  color: #e2e8f0;
   padding: 2rem;
   border-radius: 12px;
   max-width: 600px;
@@ -770,6 +785,22 @@ h6 {
   color: #000;
 }
 
+.modal__title {
+  font-size: calc(16.8px + 7.2 * (100vw - 320px) / (2560 - 320));
+  font-weight: 700;
+}
+
+.modal__image img {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .modal__description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -778,24 +809,21 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: justify;
   text-indent: 2%;
   text-justify: auto;
-  font-size: calc(16.8px + 7.2 * (100vw - 320px) / (2560 - 320));
+  font-size: calc(16.8px + 3.2 * (100vw - 320px) / (2560 - 320));
   line-height: 1.5;
 }
 
 .modal__description h3 {
   text-align: center;
-  font-weight: 700;
-}
-
-.modal__description img {
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-bottom: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #c3cfde;
+  border-bottom: 1px solid #3b82f6;
 }
 
 .modal__links {
@@ -821,6 +849,12 @@ h6 {
           box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
 }
 
+.modal__links a:hover {
+  background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
+  -webkit-box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+}
+
 .wrapper {
   min-height: 100%;
   overflow-x: clip;
@@ -843,6 +877,12 @@ h6 {
 [class*=__container] {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .fa-user {
