@@ -67,10 +67,13 @@
       padding: 10px;
       background: varSt.$btn-bg-prim;
       color: varSt.$color-prim;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
 
       &:hover {
-        background: linear-gradient(45deg, #0f1f38 0%, #2e4177 25%, #94459a 85%, #b535be 100%);
-        box-shadow: 1px 4px 8px #000000;
+        // background: linear-gradient(45deg, #0f1f38 0%, #2e4177 25%, #94459a 85%, #b535be 100%);
+        // box-shadow: 1px 4px 8px #000000;
+        background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
+        box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
       }
     }
   }

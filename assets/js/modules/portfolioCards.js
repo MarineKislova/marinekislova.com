@@ -22,7 +22,7 @@ function renderPortfolioCards(itemsSelector, projects, EN, UA, RU) {
     cardItem.setAttribute("data-category", item.filter);
 
     //hide card if title is empty
-    if (item.title === "") {
+    if (item.filter === "") {
       cardItem.style.display = "none";
     }
     //card title
@@ -36,6 +36,19 @@ function renderPortfolioCards(itemsSelector, projects, EN, UA, RU) {
     cardImage.src = item.image;
     cardImage.alt = item.title;
     cardItem.appendChild(cardImage);
+    //card subtitle
+    const cardSubtitle = document.createElement("p");
+    cardSubtitle.classList.add("portfolio__item-subtitle");
+    if (english) cardSubtitle.textContent = item.subtitle || "";
+    else if (ukrainian) cardSubtitle.textContent = item.subtitleUA || "";
+    else if (russian) cardSubtitle.textContent = item.subtitleRU || "";
+    cardItem.appendChild(cardSubtitle);
+    //card tehnologies
+    const cardTechnologies = document.createElement("p");
+    cardTechnologies.classList.add("portfolio__item-technologies");
+    cardTechnologies.textContent = item.technologies.split(", ").join(", ");
+    cardItem.appendChild(cardTechnologies);
+
     //card more details button
     const cardBtn = document.createElement("button");
     cardBtn.classList.add("portfolio__btn");

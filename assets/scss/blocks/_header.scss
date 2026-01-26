@@ -41,6 +41,12 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    a{
+      &:hover{
+        color: #B702C4;
+      }
+    }
   }
 
 
@@ -50,12 +56,12 @@
     @include mh.adaptiv-value("gap", 10, 5, 0);
     gap: 10px;
     .active-lang {
-      color: #c22f1f;
+      color: #b702c4;
     }
   }
 
   &__lang-item {
-    border-right: 2px solid #c22f1f;
+    border-right: 2px solid #88588b;
     padding-right: 12px;
     font-weight: 800;
 

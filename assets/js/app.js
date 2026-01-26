@@ -11,22 +11,36 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".burger__nav").classList.toggle("open");
   });
 
+  let one = [];
+  for (const filter in portfolio) {
+    one.push(portfolio[filter].filter);
+  }
+  console.log(one);
+  let filters = [...new Set(one)];
+  console.log(filters);
+
+  //filters btn
+  function createFilterBtn(filter) {
+    const container = document.querySelector(".portfolio__filters");
+    const btn = document.createElement("button");
+    btn.classList.add("filter-btn");
+    btn.dataset.filter = filter;
+    btn.textContent = filter;
+    if (btn.dataset.filter === "") {
+      btn.style.display = "none";
+    } else {
+      btn.style.display = "block";
+    }
+    container.appendChild(btn);
+  }
+
+  if (document.querySelector(".portfolio__filters")) {
+    filters.forEach(createFilterBtn);
+  }
+
   // filters
   const filterBtns = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll(".portfolio__item");
-
-  function filterMap(items) {
-    let one = [];
-    for (const filter in items) {
-      one = items[filter].filter;
-      console.log(one);
-      
-      console.log(items[filter].filter);
-    }
-    console.log(one);
-  }
-
-  filterMap(portfolio);
 
   filterBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -35,9 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
       filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
 
+      const items = document.querySelectorAll(".portfolio__item");
+
       items.forEach((item) => {
-        item.style.display = filter === "all" || item.dataset.category === filter ? "block" : "none";
+        item.style.display = filter === "all" || item.dataset.category === filter ? "flex" : "none";
+        if (item.dataset.category === "") item.style.display = "none";
       });
+
+      
     });
   });
 
