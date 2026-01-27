@@ -336,13 +336,24 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
 .hero-section__links .CV {
+  text-align: center;
+  font-size: calc(11.2px + 4.8 * (100vw - 320px) / (2560 - 320));
+  max-width: 300px;
   border-radius: 5px;
-  padding: 10px;
+  padding: calc(7px + 3 * (100vw - 320px) / (2560 - 320));
   background: #3b82f6;
   color: #e2e8f0;
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
@@ -353,6 +364,23 @@ h6 {
   background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
   -webkit-box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
           box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+}
+
+.hero-section__links .CV:hover span {
+  color: #ff5858;
+}
+
+.hero-section__links .CV span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #feffff;
+  padding-left: calc(6px + 4 * (100vw - 320px) / (2560 - 320));
+}
+
+.hero-section__links .remark {
+  width: 80%;
+  font-size: calc(8.5px + 4.5 * (100vw - 320px) / (2560 - 320));
+  line-height: 1.4;
 }
 
 .hero-section__right {
