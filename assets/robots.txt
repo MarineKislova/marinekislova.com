@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /doPublish/
+Disallow: /test/
+Sitemap: https://marinekislova.com/sitemap.xml
