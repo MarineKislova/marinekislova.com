@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home / EN -->
+  <url>
+    <loc>https://marinekislova.com/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/"/>
+  </url>
+
+  <!-- Home / UA -->
+  <url>
+    <loc>https://marinekislova.com/ua/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/"/>
+  </url>
+
+  <!-- Home / RU -->
+  <url>
+    <loc>https://marinekislova.com/ru/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/"/>
+  </url>
+
+  <!-- Portfolio / EN -->
+  <url>
+    <loc>https://marinekislova.com/portfolio.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/portfolio.html"/>
+  </url>
+
+  <!-- Portfolio / UA -->
+  <url>
+    <loc>https://marinekislova.com/ua/portfolio.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/portfolio.html"/>
+  </url>
+
+  <!-- Portfolio / RU -->
+  <url>
+    <loc>https://marinekislova.com/ru/portfolio.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marinekislova.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://marinekislova.com/ua/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://marinekislova.com/ru/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://marinekislova.com/portfolio.html"/>
+  </url>
+
+</urlset>
