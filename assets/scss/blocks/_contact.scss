@@ -1,43 +1,164 @@
 @use "utils/_mixins" as ch;
+@use "utils/_variable.scss" as varSt;
 
 .contact {
-  @include ch.adaptiv-value("padding-top", 25, 15, 0);
-  @include ch.adaptiv-value("padding-bottom", 25, 15, 0);
-  // padding-bottom: 104px;
+  @include ch.adaptiv-value("padding-top", 45, 15, 0);
+  @include ch.adaptiv-value("padding-bottom", 45, 15, 0);
+  h2 {
+    @include ch.adaptiv-value("font-size", 32, 24, 0);
+    text-align: center;
+    @include ch.adaptiv-value("padding-bottom", 45, 10, 0);
+    font-family: "Roboto";
+  }
+
   &__container {
-    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     @include ch.adaptiv-value("line-height", 40, 24, 0);
-    h2 {
-      @include ch.adaptiv-value("font-size", 32, 24, 0);
+    h3 {
+      @include ch.adaptiv-value("font-size", 24, 18, 0);
       text-align: center;
       @include ch.adaptiv-value("padding-bottom", 20, 10, 0);
       font-family: "Roboto";
+      color: rgb(147, 147, 226);
     }
 
     .fa-envelope {
       @include ch.adaptiv-value("font-size", 36, 27, 0);
     }
 
-    a{
+    a {
       @include ch.adaptiv-value("font-size", 24, 18, 0);
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    height: 50vh;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    @include ch.adaptiv-value("gap", 15, 7.5, 0);
+    @include ch.adaptiv-value("padding", 20, 7.5, 0);
+    // padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.85);
+    box-shadow: -3px 7px 15px rgba(0, 0, 0, 0.85);
+    border: 1px solid #795388;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    flex: 1;
+    @include ch.adaptiv-value("padding", 20, 10, 0);
+    // padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -3px 7px 15px rgba(0, 0, 0, 0.85);
+    box-shadow: 3px 7px 15px rgba(0, 0, 0, 0.85);
+    border: 1px solid #795388;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      // max-width: 500px;
+      width: 80%;
+      gap: 15px;
+    }
+
+    input {
+      // width: 50%;
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset -1px 3px 3px rgba(0, 0, 0, 0.2);
+      line-height: 2;
+      background-color: aliceblue;
+      padding: 2px;
+      text-align: center;
+      outline: none; //убираем внешние границы, когда курсор внутри инпута
+
+      &:focus::placeholder {
+        color: transparent;
+      } //убираем текст при фокусорвке в инпуте
+    }
+
+    textarea {
+      height: 50px;
+      @include ch.adaptiv-value("height", 50, 100, 0);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: inset -1px -1px 3px rgba(0, 0, 0, 0.5);
+      background-color: aliceblue;
+      outline: none; //убираем внешние границы, когда курсор внутри инпута
+
+      // ДОБАВЛЯЕМ ЭТИ СВОЙСТВА:
+      color: #333; // Явный темно-серый или черный цвет текста
+      padding: 10px; // Чтобы текст не прилипал к краям рамки
+      font-family: inherit; // Чтобы шрифт был как во всей форме
+      font-size: 16px; // Хороший размер для читаемости
+      line-height: 1.2; // Чтобы буквы не слипались по вертикали
+
+      &:focus::placeholder {
+        color: transparent;
+      } //убираем текст при фокусорвке в инпуте
+      // На всякий случай зададим цвет placeholder, чтобы он не сливался
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    button {
+      border-radius: 5px;
+      @include ch.adaptiv-value("padding", 10, 7, 0);
+      background: varSt.$btn-bg-prim;
+      color: varSt.$color-prim;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
+
+      &:hover {
+        // background: linear-gradient(45deg, #0f1f38 0%, #2e4177 25%, #94459a 85%, #b535be 100%);
+        // box-shadow: 1px 4px 8px #000000;
+        background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
+        box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+        span {
+          color: #ff5858;
+        }
+      }
+
+      // color: rgb(147, 147, 226);
+      font-weight: 600;
+      padding: 5px;
+      width: 200px;
+      align-self: center;
     }
   }
 }
 
 .fa-phone {
-  color: #64A3FD;
+  color: #64a3fd;
   padding-right: 25px;
 }
 .fa-telegram {
-  color: #64A3FD;
+  color: #64a3fd;
   padding-right: 25px;
 }
 .fa-envelope-open-text {
-  color: #64A3FD;
+  color: #64a3fd;
   padding-right: 25px;
 }

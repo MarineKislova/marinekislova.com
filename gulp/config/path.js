@@ -7,6 +7,7 @@ const srcFolder = `./assets`; // папка с исходными файлами
 export const path = {
   build: {
     js: `${buildFolder}/js/`,
+    json: `${buildFolder}/js/data/`,
     css: `${buildFolder}/css/`,
     images: `${buildFolder}/img/`,
     fonts: `${buildFolder}/fonts/`,
@@ -14,9 +15,11 @@ export const path = {
     ru: `${buildFolder}/ru/`,
     ua: `${buildFolder}/ua/`,
     files: `${buildFolder}/files/`,
+    other: `${buildFolder}/`,
   },
   src: {
     js: `${srcFolder}/js/app.js`,
+    json: `${srcFolder}/js/data/**/*.json`,
     scss: `${srcFolder}/scss/style.scss`,
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
@@ -24,16 +27,19 @@ export const path = {
     ru: `${srcFolder}/ru/*.html`, //.pug
     ua: `${srcFolder}/ua/*.html`, //.pug
     files: `${srcFolder}/files/**/*.*`,
+    other: `${srcFolder}/*.{php,txt,xml}`,
     svgicons: `${srcFolder}/icons/*.svg`,
   },
   watch: {
     js: `${srcFolder}/js/**/*.js`,
+    json: `${srcFolder}/js/data/`,
     scss: `${srcFolder}/scss/**/*.scss`,
     images: `${srcFolder}img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     html: `${srcFolder}/**/*.html`, //.pug
     ru: `${srcFolder}/**/*.html`, //.pug
     ua: `${srcFolder}/**/*.html`, //.pug
     files: `${srcFolder}/files/**/*.*`,
+    other: `${srcFolder}/*.{php,txt,xml}`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,

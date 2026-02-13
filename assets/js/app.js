@@ -1,5 +1,5 @@
 import * as commonFunctions from "./modules/functions.js";
-import { portfolio } from "./modules/portfolioData.js";
+// import { portfolio } from "./modules/portfolioData.js";
 import { renderPortfolioCards } from "./modules/portfolioCards.js";
 
 commonFunctions.isWebp();
@@ -55,13 +55,58 @@ document.addEventListener("DOMContentLoaded", function () {
         item.style.display = filter === "all" || item.dataset.category === filter ? "flex" : "none";
         if (item.dataset.category === "") item.style.display = "none";
       });
-
-      
     });
   });
 
   //portfolio cards
-  renderPortfolioCards(".portfolio__items", portfolio, "portfolioEN", "portfolioUA", "portfolioRU");
+  fetch("./data/portfolio.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("Portfolio JSON not loaded");
+      return res.json();
+    })
+    .then((portfolio) => {
+      renderPortfolioCards(".portfolio__items", portfolio, "portfolioEN", "portfolioUA", "portfolioRU");
+    })
+    .catch((err) => {
+      console.error("Portfolio load error:", err);
+    });
+
+  //форма отправки
+  document.getElementById("tg-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = this;
+    const btn = document.getElementById("submit-btn");
+    const status = document.getElementById("status-message");
+    const formData = new FormData(form);
+
+    // Проверка ловушки (если поле заполнено — это бот)
+    if (formData.get("honey")) {
+      console.warn("Spam detected");
+      return;
+    }
+
+    btn.disabled = true;
+    status.textContent = "Отправка...";
+
+    try {
+      const response = await fetch("send.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        status.textContent = "Успешно отправлено!";
+        form.reset();
+      } else {
+        status.textContent = "Ошибка при отправке.";
+      }
+    } catch (error) {
+      status.textContent = "Ошибка сети.";
+    } finally {
+      btn.disabled = false;
+    }
+  });
 
   // year in footer
   const currentYear = new Date().getFullYear();
