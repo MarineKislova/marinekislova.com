@@ -37,7 +37,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data)); // Используем http_build_query
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 //! КРИТИЧНО ДЛЯ MAMP, на сервере поменять на true:
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true); 
 
 $result = curl_exec($ch);
 $error = curl_error($ch);

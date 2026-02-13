@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".burger__nav").classList.toggle("open");
   });
 
-  let one = [];
-  for (const filter in portfolio) {
-    one.push(portfolio[filter].filter);
-  }
-  console.log(one);
-  let filters = [...new Set(one)];
-  console.log(filters);
+  // let one = [];
+  // for (const filter in portfolio) {
+  //   one.push(portfolio[filter].filter);
+  // }
+  // console.log(one);
+  // let filters = [...new Set(one)];
+  // console.log(filters);
 
   //filters btn
   function createFilterBtn(filter) {
@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //форма отправки
   document.getElementById("tg-form").addEventListener("submit", async function (e) {
+    
     e.preventDefault();
 
     const form = this;
