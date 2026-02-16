@@ -1,84 +1,108 @@
 import * as commonFunctions from "./modules/functions.js";
-// import { portfolio } from "./modules/portfolioData.js";
 import { renderPortfolioCards } from "./modules/portfolioCards.js";
 
 commonFunctions.isWebp();
 
 document.addEventListener("DOMContentLoaded", function () {
-  // burger menu
-  document.querySelector(".burger").addEventListener("click", function () {
-    this.classList.toggle("active");
-    document.querySelector(".burger__nav").classList.toggle("open");
-  });
+  // --- Burger menu ---
+  const burger = document.querySelector(".burger");
+  if (burger) {
+    burger.addEventListener("click", function () {
+      this.classList.toggle("active");
+      document.querySelector(".burger__nav").classList.toggle("open");
+    });
+  }
 
-  // let one = [];
-  // for (const filter in portfolio) {
-  //   one.push(portfolio[filter].filter);
-  // }
-  // console.log(one);
-  // let filters = [...new Set(one)];
-  // console.log(filters);
-
-  //filters btn
+  // --- Функция создания кнопок фильтров ---
   function createFilterBtn(filter) {
     const container = document.querySelector(".portfolio__filters");
+    const elementEN = document.querySelector('[data-lang="EN"]');
+    const elementUA = document.querySelector('[data-lang="UA"]');
+    const elementRU = document.querySelector('[data-lang="RU"]');
+
+    if (!container) return;
+
     const btn = document.createElement("button");
     btn.classList.add("filter-btn");
     btn.dataset.filter = filter;
-    btn.textContent = filter;
-    if (btn.dataset.filter === "") {
-      btn.style.display = "none";
+
+    // Красивое отображение текста кнопки
+    if (filter === "all" && elementEN) {
+      btn.textContent = "ALL"; // Или "Все"
+    } else if (filter === "all" && elementUA) {
+      btn.textContent = "УСІ";
+    } else if (filter === "all" && elementRU) {
+      btn.textContent = "ВСЕ";
     } else {
-      btn.style.display = "block";
+      btn.textContent = filter.charAt(0).toUpperCase() + filter.slice(1);
     }
+
+    btn.style.display = filter === "" ? "none" : "block";
     container.appendChild(btn);
   }
 
-  if (document.querySelector(".portfolio__filters")) {
-    filters.forEach(createFilterBtn);
-  }
+  // --- Функция инициализации кликов по фильтрам ---
+  function initPortfolioFilters() {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    if (filterBtns.length > 0) filterBtns[0].classList.add("active");
 
-  // filters
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll(".portfolio__item");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filter = btn.dataset.filter;
+        document.querySelectorAll(".portfolio__item").forEach((item) => {
+          const isAll = filter === "all";
+          const matchesCategory = item.dataset.category === filter;
+          const isEmpty = !item.dataset.category; // Защита от пустых данных
 
-      filterBtns.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const items = document.querySelectorAll(".portfolio__item");
-
-      items.forEach((item) => {
-        item.style.display = filter === "all" || item.dataset.category === filter ? "flex" : "none";
-        if (item.dataset.category === "") item.style.display = "none";
+          item.style.display = isEmpty ? "none" : isAll || matchesCategory ? "flex" : "none";
+        });
       });
     });
-  });
+  }
 
-  //portfolio cards
-  fetch("./data/portfolio.json")
+  // --- Загрузка данных и отрисовка ---
+  fetch("/js/data/portfolioData.json")
     .then((res) => {
       if (!res.ok) throw new Error("Portfolio JSON not loaded");
       return res.json();
     })
-    .then((portfolio) => {
-      renderPortfolioCards(".portfolio__items", portfolio, "portfolioEN", "portfolioUA", "portfolioRU");
+    .then((portfolioData) => {
+      // 1. Собираем уникальные фильтры (только если они не пустые)
+      const rawFilters = portfolioData.map((item) => item.filter).filter((f) => f && f.trim() !== "");
+
+      const uniqueFilters = ["all", ...new Set(rawFilters)];
+
+      // 2. Генерируем кнопки фильтров
+      uniqueFilters.forEach(createFilterBtn);
+
+      // 3. Отрисовываем сами карточки проектов
+      renderPortfolioCards(".portfolio__items", portfolioData, "portfolioEN", "portfolioUA", "portfolioRU");
+
+      // 4. Навешиваем обработчики событий (теперь элементы точно в DOM)
+      initPortfolioFilters();
     })
-    .catch((err) => {
-      console.error("Portfolio load error:", err);
-    });
+    .catch((err) => console.error("Portfolio load error:", err));
 
   //форма отправки
   document.getElementById("tg-form").addEventListener("submit", async function (e) {
-    
     e.preventDefault();
 
     const form = this;
     const btn = document.getElementById("submit-btn");
     const status = document.getElementById("status-message");
+
+    const currentLang = form.dataset.siteLang || "EN";
+
+    const translations = {
+      UA: { sending: "Відправка...", success: "Успішно!", error: "Помилка." },
+      EN: { sending: "Sending...", success: "Success!", error: "Error." },
+      RU: { sending: "Отправка...", success: "Успешно!", error: "Ошибка." },
+    };
+    const msg = translations[currentLang];
+
     const formData = new FormData(form);
 
     // Проверка ловушки (если поле заполнено — это бот)
@@ -88,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     btn.disabled = true;
-    status.textContent = "Отправка...";
+    status.textContent = msg.sending;
 
     try {
       const response = await fetch("send.php", {
@@ -109,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // year in footer
-  const currentYear = new Date().getFullYear();
-  document.getElementById("dataFooter").textContent = currentYear;
+  // --- Footer Year ---
+  const footerYear = document.getElementById("dataFooter");
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
 });

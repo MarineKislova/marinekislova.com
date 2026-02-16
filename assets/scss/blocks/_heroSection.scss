@@ -12,6 +12,10 @@
     justify-content: space-evenly;
     padding-bottom: 10px;
     gap: 10px;
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -21,6 +25,13 @@
     @include hh.adaptiv-value("width", 750, 170, 0);
     // width: 550px;
     @include hh.adaptiv-value("gap", 30, 10, 0);
+    @include hh.adaptiv-value("text-indent", 20, 10, 0);
+
+    @media (max-width: 520px) {
+      width: 100%;
+      text-align: justify;
+      text-justify: auto;
+    }
   }
 
   &__title {
@@ -66,6 +77,10 @@
     gap: 10px;
 
     .CV {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       text-align: center;
       @include hh.adaptiv-value("font-size", 16, 11.2, 0);
       max-width: 300px;
@@ -80,20 +95,20 @@
         // box-shadow: 1px 4px 8px #000000;
         background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
         box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
-        span{
+        span {
           color: #ff5858;
         }
       }
 
-      span{
+      span {
         font-size: 14px;
         font-weight: 700;
         color: #feffff;
-        @include hh.adaptiv-value("padding-left", 10, 6, 0);
+        @include hh.adaptiv-value("padding-left", 10, 0, 0);
       }
     }
 
-    .remark{
+    .remark {
       width: 80%;
       @include hh.adaptiv-value("font-size", 13, 8.5, 0);
       line-height: 1.4;
@@ -116,6 +131,15 @@
       height: 100%;
       object-fit: cover;
       border-radius: 20px;
+    }
+
+    @media (max-width: 520px) {
+      width: 100%;
+      text-align: justify;
+      text-justify: auto;
+      width: 75%;
+      height: auto;
+      align-self: center;
     }
   }
 }

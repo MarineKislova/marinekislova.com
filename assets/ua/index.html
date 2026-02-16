@@ -122,11 +122,27 @@
 
         <!-- Contact Section  -->
         <section id="contact" class="contact">
+          <h2><i class="fa fa-envelope"></i>Контакти</h2>
           <div class="contact__container">
-            <h2><i class="fa fa-envelope"></i> Передзвоніть мені</h2>
-            <a href="tel:+380955221952"><i class="fa-solid fa-phone"></i>+38 095 522 19 52</a>
-            <a href="https://t.me/marinekislova" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>@marinekislova</a>
-            <a href="mailto:marinekislova@gmail.com"><i class="fa-solid fa-envelope-open-text"></i>marinekislova@gmail.com</a>
+            <div class="contact__left">
+              <h3>Зв'яжіться зі мною</h3>
+              <a href="tel:+380955221952"><i class="fa-solid fa-phone"></i>+38 095 522 19 52</a>
+              <a href="https://t.me/marinekislova" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i>@marinekislova</a>
+              <a href="mailto:marinekislova@gmail.com"><i class="fa-solid fa-envelope-open-text"></i>marinekislova@gmail.com</a>
+            </div>
+            <div class="contact__right">
+              <h3>Напишіть мені</h3>
+              <form id="tg-form" data-site-lang="UA">
+                <input type="text" name="name" placeholder="Ваше ім'я" required />
+                <input type="tel" name="phone" placeholder="Телефон" required />
+                <textarea name="message" placeholder="Повідомлення" required></textarea>
+
+                <input type="text" name="honey" style="display: none" tabindex="-1" autocomplete="off" />
+
+                <button type="submit" id="submit-btn">надіслати повідомлення</button>
+                <div id="status-message"></div>
+              </form>
+            </div>
           </div>
         </section>
       </main>
