@@ -297,6 +297,7 @@ h6 {
           justify-content: space-evenly;
   width: calc(170px + 580 * (100vw - 320px) / (2560 - 320));
   gap: calc(10px + 20 * (100vw - 320px) / (2560 - 320));
+  text-indent: calc(10px + 10 * (100vw - 320px) / (2560 - 320));
 }
 
 .hero-section__title {
@@ -349,6 +350,16 @@ h6 {
 }
 
 .hero-section__links .CV {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
   text-align: center;
   font-size: calc(11.2px + 4.8 * (100vw - 320px) / (2560 - 320));
   max-width: 300px;
@@ -374,7 +385,7 @@ h6 {
   font-size: 14px;
   font-weight: 700;
   color: #feffff;
-  padding-left: calc(6px + 4 * (100vw - 320px) / (2560 - 320));
+  padding-left: calc(0px + 10 * (100vw - 320px) / (2560 - 320));
 }
 
 .hero-section__links .remark {
@@ -1272,5 +1283,31 @@ h6 {
     height: 100%;
     padding: 8px;
     gap: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-section__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .hero-section__left {
+    width: 100%;
+    text-align: justify;
+    text-justify: auto;
+  }
+
+  .hero-section__right {
+    width: 100%;
+    text-align: justify;
+    text-justify: auto;
+    width: 75%;
+    height: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
