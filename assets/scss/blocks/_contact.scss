@@ -13,8 +13,8 @@
 
   &__container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    align-items: stretch;
     gap: 20px;
     @include ch.adaptiv-value("line-height", 40, 24, 0);
     h3 {
@@ -23,6 +23,8 @@
       @include ch.adaptiv-value("padding-bottom", 20, 10, 0);
       font-family: "Roboto";
       color: rgb(147, 147, 226);
+      margin-top: 0;
+      margin-bottom: 5%;
     }
 
     .fa-envelope {
@@ -40,13 +42,14 @@
 
   &__left {
     display: flex;
-    height: 50vh;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
-    @include ch.adaptiv-value("gap", 15, 7.5, 0);
+    @include ch.adaptiv-value("gap", 20, 10.5, 0);
     @include ch.adaptiv-value("padding", 20, 7.5, 0);
     // padding: 20px;
     border-radius: 10px;
@@ -61,11 +64,9 @@
 
   &__right {
     display: flex;
-    height: 50vh;
     flex-direction: column;
     flex: 1;
     @include ch.adaptiv-value("padding", 20, 10, 0);
-    // padding: 20px;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -132,8 +133,6 @@
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
 
       &:hover {
-        // background: linear-gradient(45deg, #0f1f38 0%, #2e4177 25%, #94459a 85%, #b535be 100%);
-        // box-shadow: 1px 4px 8px #000000;
         background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
         box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
         span {
@@ -143,8 +142,8 @@
 
       // color: rgb(147, 147, 226);
       font-weight: 600;
-      padding: 5px;
-      width: 200px;
+      padding: 0px 10px;
+      width: max-content;
       align-self: center;
     }
   }

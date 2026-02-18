@@ -26,6 +26,7 @@
     background: linear-gradient(90deg, #3b82f6, #8a58fd, #934399, #6a2f6e);
     background-clip: text;
     color: transparent;
+    line-height: 1.5;
   }
 
   &__nav {
@@ -45,6 +46,7 @@
     a{
       &:hover{
         color: #B702C4;
+        
       }
     }
   }

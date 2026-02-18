@@ -1,0 +1,128 @@
+@use "utils/_mixins" as ch;
+@use "utils/_variable.scss" as varSt;
+
+.portfolioOnMain {
+  @include ch.adaptiv-value("padding-top", 45, 15, 0);
+  @include ch.adaptiv-value("padding-bottom", 45, 15, 0);
+  h2 {
+    @include ch.adaptiv-value("font-size", 32, 24, 0);
+    text-align: center;
+    @include ch.adaptiv-value("padding-bottom", 45, 10, 0);
+    font-family: "Roboto";
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+  }
+
+  &__slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  &__link {
+    margin-top: 20px;
+    border-radius: 5px;
+    @include ch.adaptiv-value("padding", 10, 7, 0);
+    background: varSt.$btn-bg-prim;
+    color: varSt.$color-prim;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.8);
+
+    &:hover {
+      background: linear-gradient(15deg, #3b82f6 0%, #1d5abc 10%, #053a8f 50%, #1d5abc 90%, #3b82f6 100%);
+      box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.9);
+      span {
+        color: #ff5858;
+      }
+    }
+    font-weight: 600;
+    padding: 10px;
+    width: max-content;
+    align-self: center;
+  }
+
+  @media (min-width: 1001px) {
+    display: none;
+  }
+}
+.fa {
+}
+.fa-th {
+}
+.mySlides {
+  display: none;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  position: absolute;
+  @include ch.adaptiv-value("bottom", 8, -18, 0);
+  // bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(228, 205, 205, 0.1);
+  border-radius: 5px;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.dot {
+  display: flex;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}

@@ -13,6 +13,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // --- Slider portfolio on index.html ---
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  // 1. Контролы "Вперед/Назад"
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  if (prevBtn) prevBtn.addEventListener("click", () => plusSlides(-1));
+  if (nextBtn) nextBtn.addEventListener("click", () => plusSlides(1));
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // 2. Клик по точкам (dots)
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlides((slideIndex = index + 1));
+    });
+  });
+
+  // 3. Клик по картинкам (НОВОЕ)
+  const slideImages = document.querySelectorAll(".slideImg");
+  slideImages.forEach((img) => {
+    img.style.cursor = "pointer"; // Чтобы курсор менялся на "руку"
+    img.addEventListener("click", () => {
+      plusSlides(1); // При клике идем к следующему слайду
+    });
+  });
+
+  // Главная функция отображения
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dotsArr = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    // Скрываем все слайды
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    // Убираем класс active у точек
+    for (let i = 0; i < dotsArr.length; i++) {
+      dotsArr[i].className = dotsArr[i].className.replace(" active", "");
+    }
+
+    // Показываем нужный слайд и точку
+    if (slides[slideIndex - 1]) {
+      slides[slideIndex - 1].style.display = "block";
+    }
+    if (dotsArr[slideIndex - 1]) {
+      dotsArr[slideIndex - 1].className += " active";
+    }
+  }
+
   // --- Функция создания кнопок фильтров ---
   function createFilterBtn(filter) {
     const container = document.querySelector(".portfolio__filters");

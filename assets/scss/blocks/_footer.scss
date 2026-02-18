@@ -11,10 +11,11 @@
   bottom: 0px;
   width: 100%;
   background-color: varSt.$bg-nav !important;
+  padding: 10px 5px;
 
-   @media (max-width: 978px) {
-      position: static;
-    }
+  @media (max-width: 978px) {
+    position: static;
+  }
 
   &__container {
     display: flex;
